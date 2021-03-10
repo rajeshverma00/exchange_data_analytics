@@ -95,7 +95,7 @@ def historicalRatesSet():
     '''
     while True:
         try:
-            print('NOTE: The furthest you can go back to is 1999!')
+            print('NOTE: The furthest you can go back to is 2018!')
 
             year = setYear()
             
@@ -116,7 +116,7 @@ def historicalRatesSet():
     try:
         print(f'Now fetching exchange rates for {baseCurrency} on the following date: {day}-{month}-{year}')
         #Get data
-        response = req.get(url=f'https://api.exchangeratesapi.io/{year}-{month}-{day}?base={baseCurrency}&symbols={compareCurrency}')
+        response = req.get(url=f'https://api.exchangeratesapi.io/{year}-{month}-{day}?base={baseCurrency}&symbols={compareCurrency}&symbols=JPY,USD,CAD,GBP,NZD,INR')
         #Deserialise response into Python dictionary
         responseDict = loads(response.text)
         #the response has multiple dictionaries
@@ -193,7 +193,7 @@ def historicalRatesPeriod():
     try:
         print(f'Now fetching exchange rates for {baseCurrency} between the following dates: {startDate} - {endDate}')
         #Get data
-        response = req.get(url=f'https://api.exchangeratesapi.io/history?start_at={startDate}&end_at={endDate}&base={baseCurrency}&symbols={compareCurrency}')
+        response = req.get(url=f'https://api.exchangeratesapi.io/history?start_at={startDate}&end_at={endDate}&base={baseCurrency}&symbols={compareCurrency}&symbols=JPY,USD,CAD,GBP,NZD,INR')
         #Deserialise response into Python dictionary
         responseDict = loads(response.text)
         #the response has multiple dictionaries
