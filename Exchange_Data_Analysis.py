@@ -158,7 +158,7 @@ def historicalRatesPeriod():
     while True:
         try:
             print('NOTE: Creating start date')
-            print('NOTE: The furthest you can go back to is 1999!')
+            print('NOTE: The furthest you can go back to is 2018!')
 
             year = setYear()
             
@@ -174,7 +174,7 @@ def historicalRatesPeriod():
     while True:
         try:
             print('NOTE: Creating end date')
-            print('NOTE: The furthest you can go back to is 1999!')
+            print('NOTE: The furthest you can go back to is 2018!')
 
             year = setYear()
             
