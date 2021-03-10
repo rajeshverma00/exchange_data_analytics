@@ -305,10 +305,7 @@ def main():
         elif choice == 'A':
             print(
                 '''
-The currency exchange program uses the foreign exchange rates API (https://exchangeratesapi.io/) which gets data from the European Central Bank.
-The data is then used to create a DataFrame in pandas which is then used in Plotly to create a scatter graph.
-Visit the project page on GitLab for more information - https://gitlab.com/JoshBl_/python-currency-exchange-rate
-Written by Joshua Blewitt - https://joshblewitt.dev/
+The currency exchange program uses the foreign exchange rates
                 ''')
         elif choice == 'Q':
             print('Goodbye!')
